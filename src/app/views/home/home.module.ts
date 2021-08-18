@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/share/share.module';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 
@@ -15,7 +16,8 @@ export const appRoutes: Routes = [
   imports: [
   RouterModule.forChild(appRoutes), 
   CommonModule,
-  SharedModule
+  SharedModule,
+  IvyCarouselModule
   ],
   exports: []
 })

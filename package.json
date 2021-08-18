@@ -22,6 +22,7 @@
     "@nebular/bootstrap": "^8.0.0",
     "@nebular/eva-icons": "8.0.0",
     "@nebular/theme": "^8.0.0",
+    "angular-responsive-carousel": "^2.1.2",
     "bootstrap": "^4.6.0",
     "chart.js": "^3.5.0",
     "hammerjs": "^2.0.8",
