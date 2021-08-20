@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './share/share.module';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedModule } from './share/share.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    // SlideshowModule,
     // NbThemeModule.forRoot(),
     // NbLayoutModule,
     NbThemeModule.forRoot({ name: 'default' })
