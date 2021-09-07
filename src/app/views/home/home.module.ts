@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/share/share.module';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 
 
@@ -15,8 +16,9 @@ export const appRoutes: Routes = [
   imports: [
   RouterModule.forChild(appRoutes), 
   CommonModule,
-  SharedModule
+  SharedModule,
+  SlideshowModule
   ],
-  exports: []
+  exports: [],
 })
 export class HomeModule { }

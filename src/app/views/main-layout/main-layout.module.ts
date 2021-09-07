@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './main-layout.component';
 import { HomeComponent } from '../home/home.component';
 import { SharedModule } from 'src/app/share/share.module';
-import { NbButtonModule, NbCardModule, NbLayoutModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
+import {NbSidebarModule} from '@nebular/theme';
+import { BrowserTransferStateModule, platformBrowser } from '@angular/platform-browser';
 
 export const appRoutes: Routes = [
   {
@@ -53,9 +54,10 @@ export const appRoutes: Routes = [
   imports: [
     NbSidebarModule.forRoot(),
     RouterModule.forChild(appRoutes),
-     CommonModule,
-     SharedModule
+    BrowserTransferStateModule,
+    CommonModule,
+    SharedModule
   ],
-  exports: []
+  exports: [],
 })
 export class MainLayoutModule { }

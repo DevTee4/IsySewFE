@@ -1,6 +1,7 @@
 import { BaseEntity } from "./BaseEntity"
 import { ProductType } from "./ProductType"
 import { Image } from "./Image"
+import { ProductFeatures } from "./ProductFeature"
 
 export class Product extends BaseEntity {
   name = ""
@@ -14,5 +15,7 @@ export class Product extends BaseEntity {
   images: Image[] = [];
   categories: String[] = [];
   reviewCount = 0
+  //add to the backend
+  features: ProductFeatures[] = [];
   isHighlight=false;
 }
