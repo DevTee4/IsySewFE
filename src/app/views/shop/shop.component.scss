@@ -1,0 +1,26 @@
+.bg-shop {
+    background-color: #f7fbfb;
+}
+// .top-card {
+//     background: #f6f7fb;
+// }
+.space-grid {
+    .row {
+        margin: -0.5rem;
+    }
+    div[class^="col-"] {
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+}
+
+.list-item-highlight {
+    // background: rgba(200, 229, 226, 0.4);
+    background: #c8e5e2 40%;
+}
+.icon-image {
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }

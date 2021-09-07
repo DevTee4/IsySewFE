@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NbLayoutModule, NbThemeModule } from '@nebular/theme';
+import { NbLayoutModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,6 @@ import { SharedModule } from './share/share.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     // NbThemeModule.forRoot(),
-    // NbLayoutModule,
     NbThemeModule.forRoot({ name: 'default' })
     // SharedModule
   ],
