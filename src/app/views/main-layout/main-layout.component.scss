@@ -59,4 +59,21 @@
   ::ng-deep nb-layout .layout {
     background: white;
   }
+  ::ng-deep nb-layout.window-mode .scrollable-container{
+    overflow-x: hidden !important; 
+    overflow-y: auto!important;
+  }
+  .bottom-card{
+    background-image: url("../../../assets/images/footer_img.png");
+    // background-position-x: right;
+    // background-position-x: bottom;
+    background-size: cover;
+    // background-position: right 0px bottom -10px;
+    background-repeat: no-repeat;
+    padding: 2.0rem !important;
+  }
+  .w35-h35{
+    width: 35px !important;
+    height: 35px !important;
+  }
 }

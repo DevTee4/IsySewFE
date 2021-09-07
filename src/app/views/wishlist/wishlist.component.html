@@ -1,0 +1,52 @@
+<nb-layout>
+    <nb-layout-column class=" column p-0">
+        <table class="table">
+            <thead class="thead-light">
+              <tr class="p-3 text-center row w-100">
+                <th class="col-3">Image</th>
+                <th class="col-4">Product Name</th>
+                <th class="col-2 ">Price</th>
+                <th class="col-2">Add</th>
+                <th class="col-1">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+                <ng-template ngFor let-item [ngForOf]="products">
+                    <tr class="my-auto p-3 text-center row w-100" >
+                        <td class="my-auto col-3" style="height: 120px;">
+                            <img  style="object-fit: contain;height: 120px;" [src]="item.url" class="w-100 h-100 img-fluid"/>
+                        </td>
+                        <td style="height: 120px;" class="col-4  row">
+                            <span class="my-auto w-100 p-3 text-muted">{{item.name}}</span>
+                        </td>
+                        <td style="height: 120px;" class="col-2  row">
+                            <span class="my-auto w-100 p-3  text-muted">{{item.price}}</span>
+                        </td>
+                        <td style="height: 120px;" class="my-auto row col-2">
+                            <nb-select outline="false" size="small" placeholder="Currency" class="size-small my-auto w-100 p-3 ">
+                                <nb-option value="1">NGN</nb-option>
+                                <nb-option value="2">USD</nb-option>
+                              </nb-select>                        
+                        </td>
+                        <td style="height: 120px;" class="row my-auto col-1">
+                            <button nbButton class="close border-0 bg-white">&times;</button>
+                        </td>
+                    </tr> 
+                 </ng-template>   
+            
+              <!-- <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr> -->
+            </tbody>
+        </table>
+    </nb-layout-column>
+</nb-layout>        

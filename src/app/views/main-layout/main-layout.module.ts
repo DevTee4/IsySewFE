@@ -36,6 +36,31 @@ export const appRoutes: Routes = [
         loadChildren: () =>
           import('../blog/blog.module').then((m) => m.BlogModule),
       },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../contact/contact.module').then((m) => m.ContactModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../training/training.module').then((m) => m.TrainingModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../aboutus/aboutus.module').then((m) => m.AboutModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../profile/profile.module').then((m) => m.ProfileModule),
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../wishlist/wishlist.module').then((m) => m.WishlistModule),
+      },
     ],
   }
 ];
