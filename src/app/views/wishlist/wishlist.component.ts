@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/Product';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  // providers:[SwipeService]
+  selector: 'app-wishlist',
+  templateUrl: './wishlist.component.html',
+  styleUrls: ['./wishlist.component.scss']
 })
-export class HomeComponent implements OnInit {
-  selectedProduct:any;
+export class WishlistComponent implements OnInit {
   products=
   [
      {
@@ -76,15 +73,8 @@ export class HomeComponent implements OnInit {
     },
   ]
   constructor() { }
-  slide(evt){
-    // console.log(evt);
-   this.selectedProduct= this.products[evt];
-  }
 
   ngOnInit(): void {
   }
-  hoverListItem(item:Product) {
-    item.isHighlight = ! item.isHighlight;
- }
 
 }

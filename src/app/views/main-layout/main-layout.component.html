@@ -1,5 +1,5 @@
-<nb-layout>
-  <nb-layout-header class="mb-4">
+<nb-layout windowMode>
+  <nb-layout-header fixed class="mb-4">
     <div class="column my-auto w-100">
       <div class="topMost px-100">
         <div class=" d-flex p-1 my-auto">
@@ -22,6 +22,8 @@
           <a [routerLinkActive]="'active'" routerLink="/home">HOME</a>
           <a [routerLinkActive]="'active'" routerLink="/shop">SHOP</a>
           <a [routerLinkActive]="'active'" routerLink="/blog">BLOG</a>
+          <a [routerLinkActive]="'active'" routerLink="/wishlist">CONTACT</a>
+          <a [routerLinkActive]="'active'" routerLink="/training">TRAINING</a>
         </div>
         <div style="width: 25px; height: 25px;" class="d-flex my-auto col-md-2 justify-content-between mr-5">
           <img src="../../../assets/images/search.png" class="img-fluid " />
@@ -34,4 +36,36 @@
   <nb-layout-column class="bg-white p-0 mt-4 pt-3">
     <router-outlet></router-outlet>
   </nb-layout-column>
+  <nb-layout-footer  style="background: #F1F1F1;">
+    <div class="column w-80 mx-auto my-auto">
+      <div class="rounded mt-5 p-4 py-auto bottom-card row"> 
+        <h3 class=" text-white mr-auto">Get In touch with us</h3>
+        <input type="text" nbInput shape="semi-round"  fieldSize="small" class="col-4 mr-3 px-5">
+        <button nbButton routerLink="/home" class="mr-3 text-white bg-danger">SIGN IN</button>
+      </div>
+       <div class="d-flex h-10" style="height: 100px!important;">  
+     <img style="height: 200px; margin-top: -50px  !important;" class="img-fluid col-3 my-auto mr-auto" src="../../../assets/images/log-top-home.png"/>
+     <div class="row col-3  my-auto" >
+      <a  routerLink="/home" class="mr-4 text-decoration-none text-black">About us</a>
+      <a  routerLink="/home" class="text-black text-decoration-none">Contact</a>
+     </div>
+     <div class="col-3 my-auto d-flex justify-content-around">
+      <button  size="tiny"   nbButton shape="semi-round" class="w35-h35 p-2 bg-danger w20-h20 ">
+        <img class="img-fluid "  src="../../../assets/images/web-i con.png"/>
+      </button>
+      <button   size="tiny" nbButton shape="semi-round" class="w35-h35 p-2 bg-white">
+        <img class="img-fluid "  src="../../../assets/images/fb.png"/>
+      </button>
+      <button  size="tiny"  nbButton shape="semi-round" class="w35-h35 p-2 bg-white">
+        <img class="img-fluid " src="../../../assets/images/instagram.png"/>
+      </button>
+     </div>
+       </div>
+       <hr>
+       <div class="text-muted text-center mx-auto my-auto">
+          Copyright &copy; 2021 scholarship. All Rights reserved 
+       </div>
+    </div>
+   
+  </nb-layout-footer>
 </nb-layout>

@@ -51,7 +51,7 @@
                 <h5 class="w-100 font-weight-bolder">Unique Features Of leatest & Trending Poducts</h5>
                 <ng-template ngFor let-item [ngForOf]="selectedProduct?.features">
                     <div class="row  mb-3">  
-                    <span class="my-auto rounded-circle w-10-h-10 mr-3 bg-danger"></span>
+                    <span [style.background]="item.colorCode" class="my-auto rounded-circle w-10-h-10 mr-3"></span>
                     <span class="text-black col ">{{item.description}}</span>
                    </div>
                 </ng-template>
