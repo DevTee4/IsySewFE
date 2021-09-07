@@ -22,7 +22,7 @@ export class ShopComponent implements OnInit {
     },
     {
       name:"Juice Juicy",
-      code:"Y623201",
+      code:"Y623203",
       description:"",
       images:[{url:"../../../assets/images/side-bag.png"}],
       price:70432,
@@ -31,7 +31,7 @@ export class ShopComponent implements OnInit {
     },
     {
       name:"Sally Fanny pack",
-      code:"Y523201",
+      code:"Y523205",
       description:"",
       images:[{url:"../../../assets/images/side-bag.png"}],
       price:80432,
@@ -40,7 +40,43 @@ export class ShopComponent implements OnInit {
     },
     {
       name:"Beauty Product",
-      code:"Y523201",
+      code:"Y523207",
+      description:"",
+      images:[{url:"../../../assets/images/side-bag.png"}],
+      price:90432,
+      categories:[],
+      isHighlight:false
+    },
+    {
+      name:"Beauty Product",
+      code:"Y523202",
+      description:"",
+      images:[{url:"../../../assets/images/side-bag.png"}],
+      price:90432,
+      categories:[],
+      isHighlight:false
+    },
+    {
+      name:"Beauty Product",
+      code:"Y523204",
+      description:"",
+      images:[{url:"../../../assets/images/side-bag.png"}],
+      price:90432,
+      categories:[],
+      isHighlight:false
+    },
+    {
+      name:"Beauty Product",
+      code:"Y523206",
+      description:"",
+      images:[{url:"../../../assets/images/side-bag.png"}],
+      price:90432,
+      categories:[],
+      isHighlight:false
+    },
+    {
+      name:"Beauty Product",
+      code:"Y523208",
       description:"",
       images:[{url:"../../../assets/images/side-bag.png"}],
       price:90432,

@@ -10,7 +10,7 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
