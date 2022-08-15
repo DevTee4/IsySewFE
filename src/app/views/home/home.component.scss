@@ -1,5 +1,27 @@
 .topPix {
   background: #c8e5e2;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #f38b50 0%, #fdfff5 100%);
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.topBg {
+  background: #fdfff5;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 50px;
+  margin: 30px;
+  margin-bottom: -80px !important;
+  width: 100%;
+}
+.top-text {
+  font-family: "Montserrat";
+  word-wrap: break-word;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.02em;
 }
 .code-lbl {
   color: rgba(33, 36, 61, 0.9);
@@ -13,14 +35,26 @@
   margin-left: 10px;
   margin-bottom: 10px;
 }
+.prod-card {
+  width: inherit;
+  height: 373px;
+}
 .top-card {
-  background: #f6f7fb;
+  width: inherit;
+  height: 263px;
+  background: linear-gradient(
+    180.06deg,
+    rgba(0, 0, 0, 0) 71.36%,
+    rgba(0, 0, 0, 0.2) 96.98%
+  );
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
-.carousel{
+.carousel {
   height: auto !important;
-  width: 100% !important; 
+  width: 100% !important;
 }
-.w-10-h-10{
+.w-10-h-10 {
   width: 10px;
   height: 10px;
 }
@@ -37,4 +71,25 @@
 .list-item-highlight {
   // background: rgba(200, 229, 226, 0.4);
   background: #c8e5e2 40%;
+}
+.bg-color {
+  background-color: #fff8dd !important;
+}
+.bg-frame {
+  height: 100%;
+  padding: 0px;
+}
+.bg-prod {
+  margin-top: 100px;
+  background: #57c9a0;
+  border-radius: 30px;
+}
+.text-ft {
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
 }

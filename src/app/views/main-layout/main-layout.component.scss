@@ -1,12 +1,8 @@
 @import "../../../themes.scss";
 
 @include nb-install-component() {
-  .topMost {
-    //  height: 100px;
-    background: #f1f1f1;
-  }
   .topMenu {
-    background-image: url("../../../assets/images/log-top-home.png");
+    background-image: url("../../../assets/images/isysew_logo.png");
     background-size: 200px;
     background-position: right 0px bottom -10px;
     background-repeat: no-repeat;
@@ -21,12 +17,12 @@
   ::ng-deep nb-select .select-button {
     min-width: auto;
   }
-  ::ng-deep nb-select.appearance-outline .select-button {
-    border-style: none;
-    border-width: 0px;
-    background-color: #f1f1f1;
-    color: black;
-  }
+  // ::ng-deep nb-select.appearance-outline .select-button {
+  //   border-style: none;
+  //   border-width: 0px;
+  //   background-color: #f1f1f1;
+  //   color: black;
+  // }
 
   /* Add a black background color to the top navigation */
   .topnav {
@@ -35,12 +31,11 @@
 
   /* Style the links inside the navigation bar */
   .topnav a {
-    float: left;
-    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    color: #d1cec6;
   }
 
   /* Change the color of links on hover */
@@ -51,29 +46,41 @@
 
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: white;
+    text-decoration: underline solid #c21a1a 1px;
     color: black;
-    border-bottom: 3px solid red;
   }
 
   ::ng-deep nb-layout .layout {
     background: white;
   }
-  ::ng-deep nb-layout.window-mode .scrollable-container{
-    overflow-x: hidden !important; 
-    overflow-y: auto!important;
+  ::ng-deep nb-layout.window-mode .scrollable-container {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
   }
-  .bottom-card{
+  .bottom-card {
     background-image: url("../../../assets/images/footer_img.png");
     // background-position-x: right;
     // background-position-x: bottom;
     background-size: cover;
     // background-position: right 0px bottom -10px;
     background-repeat: no-repeat;
-    padding: 2.0rem !important;
+    padding: 2rem !important;
   }
-  .w35-h35{
+  .w35-h35 {
     width: 35px !important;
     height: 35px !important;
+  }
+  .bg-color {
+    background-color: #fff8dd !important;
+  }
+  .bg-orange {
+    background-color: #F38B50 !important;
+  }
+  .pad-0 {
+    padding: none !important;
+  }
+  .topNavMenu {
+    height: 80px;
+    object-fit: scale-down;
   }
 }

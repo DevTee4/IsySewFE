@@ -1,39 +1,39 @@
 <nb-layout windowMode>
-  <nb-layout-header fixed class="mb-4">
-    <div class="column my-auto w-100">
-      <div class="topMost px-100">
-        <div class=" d-flex p-1 my-auto">
-          <p class="text-black my-auto ml-3 mr-auto">Free Shipping, 30 days return or refund gurantee</p>
-          <div class="row mt-2  mr-md-3 p-md-0">
-            <button nbButton routerLink="/sign-in" class="mr-3 bg-transparent">SIGN IN</button>
-            <button nbButton routerLink="/home" class="mr-3 bg-transparent">FAQS</button>
-            <nb-select outline="false" size="small" placeholder="Currency" class="size-small my-auto border-0 ">
-              <nb-option value="1">NGN</nb-option>
-              <nb-option value="2">USD</nb-option>
-            </nb-select>
+  <nb-layout-header>
+    <div class="column my-auto w-100 bg-color">
+      <div class="topMost px-100 bg-orange">
+        <div class=" d-flex my-auto p-1">
+          <div class="text-black my-auto ml-3 mr-auto">Free Shipping, 30 days return or refund gurantee</div>
+          <div class="row mt-2  mr-md-3 p-md-0 my-auto">
+            <button routerLink="/sign-in" class="mr-3 border-0 bg-transparent">SIGN IN</button>
+            <button routerLink="/home" class="mr-3 border-0 bg-transparent">FAQS</button>
+            <select placeholder="NGN" class=" border-0 bg-transparent">
+              <option value="1">NGN</option>
+              <option value="2">USD</option>
+            </select>
           </div>
         </div>
       </div>
 
-      <div class="row mt-3 bg-white">
-        <img style="height: 40px; object-fit: none;" src="../../../assets/images/log-top-home.png"
-          class="my-auto col-md-4 mr-auto img-fliud" />
-        <div class="topnav ml-auto d-flex flex-row col-md-4">
-          <a [routerLinkActive]="'active'" routerLink="/home">HOME</a>
-          <a [routerLinkActive]="'active'" routerLink="/shop">SHOP</a>
-          <a [routerLinkActive]="'active'" routerLink="/blog">BLOG</a>
-          <a [routerLinkActive]="'active'" routerLink="/wishlist">CONTACT</a>
-          <a [routerLinkActive]="'active'" routerLink="/training">TRAINING</a>
+      <div class="row">
+        <img src="../../../assets/images/isysew_logo.png"
+          class="my-auto col-md-2 ml-auto img-fluid topNavMenu" />
+        <div class="topnav ml-auto d-flex flex-row col-md-6 my-auto">
+          <a [routerLinkActive]="'active'" routerLink="/home">Home</a>
+          <a [routerLinkActive]="'active'" routerLink="/shop">Shop</a>
+          <a [routerLinkActive]="'active'" routerLink="/blog">Blog</a>
+          <a [routerLinkActive]="'active'" routerLink="/wishlist">Contact</a>
+          <a [routerLinkActive]="'active'" routerLink="/training">Training</a>
         </div>
         <div style="width: 25px; height: 25px;" class="d-flex my-auto col-md-2 justify-content-between mr-5">
           <img src="../../../assets/images/search.png" class="img-fluid " />
           <img src="../../../assets/images/heart.png" class="img-fluid" />
-          <img src="../../../assets/images/shopping-bag.png" class="img-fluid " />
+          <img src="../../../assets/images/cart.png" class="img-fluid " />
         </div>
       </div>
     </div>
   </nb-layout-header>
-  <nb-layout-column class="bg-white p-0 mt-4 pt-3">
+  <nb-layout-column class="bg-color pad-0">
     <router-outlet></router-outlet>
   </nb-layout-column>
   <nb-layout-footer  style="background: #F1F1F1;">

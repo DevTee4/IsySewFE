@@ -1,30 +1,31 @@
-<nb-layout>
-    <nb-layout-column class=" column p-0">
-        <div class="topPix row">
-            <div class="column px-100 col-md-7 my-auto mb-3">
-                <h2 class="font-weight-bolder">DISCOVER & SHOP THE TREND</h2>
-                <p>Chakra partners with various financial institutions to provide the various solutions to her
-                    customers.</p>
-                <button nbButton class="mt-3 font-weight-normal px-5 py-4 text-white bg-danger">SHOP NOW</button>
-
+<!-- <nb-layout> -->
+    <div class="bg-color">
+        <div class="topPix row py-2 mb-5">
+            <div class="topBg row">
+                <div class="column col-7 p-5">
+                    <h2 class="top-text">DISCOVER & SHOP THE TREND</h2>
+                    <p>Chakra partners with various financial institutions to provide the various solutions to her
+                        customers.</p>
+                    <!-- <button nbButton class="mt-3s font-weight-normal px-5 py-4 text-white bg-danger">SHOP NOW</button> -->
+                </div>
+                <img class="img-fluid col-5 bg-frame" src="../../../assets/images/frame.png" />
             </div>
-            <img class="img-fluid col-5 mb-4" src="../../../assets/images/frame.png" />
         </div>
-        <div class="column px-100">
-            <h4 class="font-weight-bold text-center p-3">Featured Products </h4>
+        <div class="row px-100 bg-prod">
+            <div class="text-ft">Featured Products </div>
             <div class="row space-grid">
                 <ng-template ngFor let-item [ngForOf]="products">
                     <div class="col-3">
-                        <div class=" p-0 card" [class.list-item-highlight]="item.isHighlight"
+                        <div class="card prod-card" [class.list-item-highlight]="item.isHighlight"
                             (mouseout)="item.isHighlight=false" (mouseover)="item.isHighlight=true">
                             <!-- top -->
-                            <div class="column px-3 pt-3 top-card">
-                                <div [style.visibility]="item.isHighlight?'visible':'hidden'" class="row mx-2 mb-2 ">
+                            <div class="top-card">
+                                <div [style.visibility]="item.isHighlight?'visible':'hidden'" class="row ">
                                     <img class="img-fluid icon-image" src="../../../assets/images/cart-item.png" />
                                     <img class="img-fluid icon-image" src="../../../assets/images/fav-blue.png" />
                                     <img class="img-fluid icon-image" src="../../../assets/images/search-blue.png" />
                                 </div>
-                                <img style="height: 160px;" class="mx-auto d-block  img-fluid row w-75"
+                                <img style="height: 250px; width: inherit;" class=" m-auto img-fluid row"
                                     [src]="item.images[0].url" />
                                 <button nbButton [style.visibility]="item.isHighlight?'visible':'hidden'"
                                     class="my-3 mx-auto small d-block p-2 text-white bg-danger">View Details</button>
@@ -45,24 +46,25 @@
 
         </div>
         <div class="row  w-75 h-30 mt-5 mx-auto">
-                  <slideshow  [showArrows]=false [disableSwiping]="true" [autoPlay]=true [showDots]=true (onIndexChanged)="slide($event)"  class="col-5 p-4" [imageUrls]="products"></slideshow>
-         
-            <div class="col-6 column" >
+            <slideshow [showArrows]=false [disableSwiping]="true" [autoPlay]=true [showDots]=true
+                (onIndexChanged)="slide($event)" class="col-5 p-4" [imageUrls]="products"></slideshow>
+
+            <div class="col-6 column">
                 <h5 class="w-100 font-weight-bolder">Unique Features Of leatest & Trending Poducts</h5>
                 <ng-template ngFor let-item [ngForOf]="selectedProduct?.features">
-                    <div class="row  mb-3">  
-                    <span [style.background]="item.colorCode" class="my-auto rounded-circle w-10-h-10 mr-3"></span>
-                    <span class="text-black col ">{{item.description}}</span>
-                   </div>
+                    <div class="row  mb-3">
+                        <span [style.background]="item.colorCode" class="my-auto rounded-circle w-10-h-10 mr-3"></span>
+                        <span class="text-black col ">{{item.description}}</span>
+                    </div>
                 </ng-template>
                 <div class="row">
-                <button nbButton class="my-3 my-auto small d-block p-3 text-white bg-danger">ADD TO CART</button>
-                <div class="column ml-3 my-auto">
-                    <p class="text-black m-0">{{selectedProduct?.name}}</p>
-                    {{selectedProduct?.price}}
-                </div>
+                    <button nbButton class="my-3 my-auto small d-block p-3 text-white bg-danger">ADD TO CART</button>
+                    <div class="column ml-3 my-auto">
+                        <p class="text-black m-0">{{selectedProduct?.name}}</p>
+                        {{selectedProduct?.price}}
+                    </div>
                 </div>
             </div>
         </div>
-    </nb-layout-column>
-</nb-layout>
+    </div>
+<!-- </nb-layout> -->

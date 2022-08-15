@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       name:"Sally Fanny pack",
       code:"Y523201",
       description:"",
-      images:[{url:"https://upload.wikimedia.org/wikipedia/commons/a/a8/Derbys_Peter_Pan_peanut_butter_sample_blikje%2C_foto3.JPG"}],
+      images:[{url:"../../../assets/images/bag1.png"}],
       price:50432,
       categories:[],
       isHighlight:false,
