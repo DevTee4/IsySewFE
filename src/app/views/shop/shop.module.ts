@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShopComponent } from './shop.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NbLayoutModule, NbSearchModule, NbSidebarModule } from '@nebular/theme';
+import { SharedModule } from 'src/app/share/share.module';
 
 export const appRoutes: Routes = [
   { path: "", component: ShopComponent },
@@ -11,9 +12,8 @@ export const appRoutes: Routes = [
 @NgModule({
   declarations: [ShopComponent],
   imports: [
-    NbSearchModule,
     NbSidebarModule,
-    NbLayoutModule,
+    SharedModule,
   RouterModule.forChild(appRoutes), CommonModule
   ],
   exports: []

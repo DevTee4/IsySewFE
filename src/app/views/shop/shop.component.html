@@ -1,48 +1,107 @@
-<!-- <nb-layout class="mt-5"> -->
-
-<!-- <nb-layout-header subheader>
-        <div class="w-25 mx-auto border row justify-content-end">
-            <nb-search type="rotate-layout"></nb-search>
+<div class="column mx-auto px-5">
+    <h4 class="font-weight-bold text-center p-3">Products </h4>
+    <!-- filter section -->
+    <div class="d-flex mb-3">
+        <span class=" view-txt ml-2 my-auto">Filter:</span>
+        <!-- price -->
+            <nb-select outline="false" [(selected)]="selectedItem" size="small" placeholder="Price ranges" class="size-small my-auto w-100 px-3 ">
+                <nb-select-label>
+                    Price range: {{ selectedItem }}
+                </nb-select-label>
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+            </nb-select>
+        <!-- colour -->
+            <nb-select outline="false" [(selected)]="selectedItem" size="small" multiple placeholder="Color" class="size-small my-auto w-100 px-3 ">
+                <nb-select-label>
+                    Color: {{ selectedItem }}
+                </nb-select-label>
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+            </nb-select>
+        <!-- style -->
+            <nb-select outline="false" [(selected)]="selectedItem" size="small" multiple placeholder="Styles" class="size-small my-auto w-100 px-3 ">
+                <nb-select-label>
+                    Styles: {{ selectedItem }}
+                </nb-select-label>
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+            </nb-select>
+        <!-- discount -->
+        <nb-select outline="false" [(selected)]="selectedItem" size="small" multiple placeholder="Discount" class="size-small my-auto w-100 px-3 ">
+            <nb-select-label>
+                Discount: {{ selectedItem }}
+            </nb-select-label>
+            <nb-option value="1">Option 1</nb-option>
+            <nb-option value="2">Option 2</nb-option>
+            <nb-option value="3">Option 3</nb-option>
+            <nb-option value="4">Option 4</nb-option>
+        </nb-select>
+        <!-- sort -->
+        <div class="ml-auto">
+            <nb-select placeholder="Sort by" outline="false" size="small" class="size-small my-auto w-100 px-3 " [(selected)]="selectedItem">
+                <nb-select-label>
+                    Sort by: {{ selectedItem }}
+                </nb-select-label>
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+            </nb-select>
         </div>
-    </nb-layout-header> -->
-
-<!-- <nb-sidebar class="mt-5 bg-shop">
-        <div>
-            sidebar
+    </div>
+    <!-- view section -->
+    <div class="row mb-3">
+        <!-- paging -->
+        <span class="ml-2 text-gray view-txt">Showing 1-8 of 51 results</span>
+        <!-- view -->
+        <div class="row ml-auto my-auto mr-4">
+            <span class="view-txt">View:</span>
+            <div class="ml-2 row">
+                <img class="img-fluid mr-3" src="../../../assets/images/grid.png" />
+                <img class="img-fluid" src="../../../assets/images/list.png" />
+            </div>
         </div>
-    </nb-sidebar> -->
-
-<!-- <nb-layout-column class="bg-shop"> -->
-    <div class="column mx-auto">
-        <h4 class="font-weight-bold text-center p-3">Featured Products </h4>
-        <div class="row space-grid">
-            <ng-template ngFor let-item [ngForOf]="products ">
-                <div class="col-3">
-                    <div class="card py-3" [class.list-item-highlight]="item.isHighlight"
-                        (mouseout)="item.isHighlight=false" (mouseover)="item.isHighlight=true">
-                        <!-- top -->
-                        <div class="">
-                            <div
-                                [style.visibility]="item.isHighlight?'visible':'hidden'" class="row ml-3">
-                                <img class="img-fluid icon-image" src="../../../assets/images/cart-item.png" />
-                                <img class="img-fluid icon-image" src="../../../assets/images/fav-blue.png" />
-                                <img class="img-fluid icon-image" src="../../../assets/images/search-blue.png" />
+    </div>
+    <!-- products -->
+    <div class="row space-grid">
+        <ng-template ngFor let-item [ngForOf]="products">
+            <div class="col-3">
+                <div (click)="showProductDetails()" class="card prod-card" [class.list-item-highlight]="item.isHighlight"
+                    (mouseout)="item.isHighlight=false" (mouseover)="item.isHighlight=true">
+                    <!-- top -->
+                    <div class="top-card">
+                        <div style="position: absolute; width: inherit;"
+                            [style.visibility]="item.isHighlight?'visible':'hidden'" class="row d-flex">
+                            <img class="img-fluid icon-image mr-auto" src="../../../assets/images/heart.png" />
+                            <div class="d-flex-col">
+                                <img class="img-fluid icon-image" src="../../../assets/images/cart.png" />
+                                <ng-template ngFor let-items [ngForOf]="item?.features" let-i="index">
+                                    <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
+                                </ng-template>
                             </div>
-                            <img class="img-fluid row mx-auto my-auto" [src]="item.images[0].url" />
                         </div>
+                        <img class="my-auto img-fluid row" [src]="item.images[0].url" />
+                        <!-- <button nbButton [style.visibility]="item.isHighlight?'visible':'hidden'"
+                            class="my-3 mx-auto small d-block p-2 text-black bg-danger">View Details</button> -->
                     </div>
                     <!-- bottom -->
-                    <div class="column">
-                        <h4 class="text-center  font-weight-light px-3 py-2 name-lbl">{{item.name}}</h4>
-                        <p class="px-3 small text-center code-lbl">Code -
+                    <div class="bottom-card">
+                        <h4 [class.text-highlight]="item.isHighlight" class="name-lbl">{{item.name}}</h4>
+                        <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
                             {{item.code}}</p>
-                        <p class="small text-center px-3  code-lbl">
+                        <p [class.text-highlight]="item.isHighlight" class="small text-center px-3  code-lbl">
                             {{item.price}}</p>
                     </div>
                 </div>
-            </ng-template>
-        </div>
-
+            </div>
+        </ng-template>
     </div>
-<!-- </nb-layout-column> -->
-<!-- </nb-layout> -->
+
+</div>

@@ -6,12 +6,12 @@
                     <h2 class="top-text">DISCOVER & SHOP THE TREND</h2>
                     <p>Chakra partners with various financial institutions to provide the various solutions to her
                         customers.</p>
-                    <!-- <button nbButton class="mt-3s font-weight-normal px-5 py-4 text-white bg-danger">SHOP NOW</button> -->
+                    <button class="font-weight-normal px-5 py-3 text-white bg-btn">SHOP NOW</button>
                 </div>
                 <img class="img-fluid col-5 bg-frame" src="../../../assets/images/frame.png" />
             </div>
         </div>
-        <div class="row px-100 bg-prod">
+        <div class="row bg-prod">
             <div class="text-ft">Featured Products </div>
             <div class="row space-grid">
                 <ng-template ngFor let-item [ngForOf]="products">
@@ -20,23 +20,29 @@
                             (mouseout)="item.isHighlight=false" (mouseover)="item.isHighlight=true">
                             <!-- top -->
                             <div class="top-card">
-                                <div [style.visibility]="item.isHighlight?'visible':'hidden'" class="row ">
-                                    <img class="img-fluid icon-image" src="../../../assets/images/cart-item.png" />
-                                    <img class="img-fluid icon-image" src="../../../assets/images/fav-blue.png" />
-                                    <img class="img-fluid icon-image" src="../../../assets/images/search-blue.png" />
+                                <div style="position: absolute; width: inherit;" [style.visibility]="item.isHighlight?'visible':'hidden'" class="row d-flex">
+                                    <img class="img-fluid icon-image mr-auto" src="../../../assets/images/heart.png" />
+                                    <div class="d-flex-col">
+                                        <img class="img-fluid icon-image" src="../../../assets/images/cart.png" />
+                                        <ng-template ngFor let-items [ngForOf]="item?.features">
+                                            <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
+                                            <!-- <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
+                                            <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span> -->
+                                        </ng-template>
+                                    </div>
                                 </div>
-                                <img style="height: 250px; width: inherit;" class=" m-auto img-fluid row"
+                                <img class="my-auto img-fluid row"
                                     [src]="item.images[0].url" />
-                                <button nbButton [style.visibility]="item.isHighlight?'visible':'hidden'"
-                                    class="my-3 mx-auto small d-block p-2 text-white bg-danger">View Details</button>
+                                <!-- <button nbButton [style.visibility]="item.isHighlight?'visible':'hidden'"
+                                    class="my-3 mx-auto small d-block p-2 text-black bg-danger">View Details</button> -->
                             </div>
                             <!-- bottom -->
-                            <div class="column">
-                                <h4 [class.text-white]="item.isHighlight"
-                                    class="text-center  font-weight-light px-3 py-2 name-lbl">{{item.name}}</h4>
-                                <p [class.text-white]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
+                            <div class="bottom-card">
+                                <h4 [class.text-highlight]="item.isHighlight"
+                                    class="name-lbl">{{item.name}}</h4>
+                                <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
                                     {{item.code}}</p>
-                                <p [class.text-white]="item.isHighlight" class="small text-center px-3  code-lbl">
+                                <p [class.text-highlight]="item.isHighlight" class="small text-center px-3  code-lbl">
                                     {{item.price}}</p>
                             </div>
                         </div>
@@ -50,7 +56,7 @@
                 (onIndexChanged)="slide($event)" class="col-5 p-4" [imageUrls]="products"></slideshow>
 
             <div class="col-6 column">
-                <h5 class="w-100 font-weight-bolder">Unique Features Of leatest & Trending Poducts</h5>
+                <h5 class="w-100 font-weight-bolder">Unique Features Of latest & Trending Products</h5>
                 <ng-template ngFor let-item [ngForOf]="selectedProduct?.features">
                     <div class="row  mb-3">
                         <span [style.background]="item.colorCode" class="my-auto rounded-circle w-10-h-10 mr-3"></span>

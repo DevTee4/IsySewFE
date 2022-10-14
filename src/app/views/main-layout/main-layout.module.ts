@@ -71,6 +71,11 @@ export const appRoutes: Routes = [
         loadChildren: () =>
           import('../wishlist/wishlist.module').then((m) => m.WishlistModule),
       },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../product-details/product-details.module').then((m) => m.ProductDetailsModule),
+      },
     ],
   }
 ];

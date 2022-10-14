@@ -24,8 +24,7 @@ export class HomeComponent implements OnInit {
       price:50432,
       categories:[],
       isHighlight:false,
-      url:"https://upload.wikimedia.org/wikipedia/commons/a/a8/Derbys_Peter_Pan_peanut_butter_sample_blikje%2C_foto3.JPG"
-
+      url:"../../../assets/images/bag1.png"
     },
     { features:[
       {description:"All frames constructed with hardwood solids and laminates",colorCode:"#F52B70"},
@@ -35,12 +34,11 @@ export class HomeComponent implements OnInit {
       name:"Juice Juicy",
       code:"Y623201",
       description:"",
-      images:[{url:"https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Aluminum_Can_1.jpg"}],
+      images:[{url:"../../../assets/images/bag2.png"}],
       price:70432,
       categories:[],
       isHighlight:false,
-      url:"https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Aluminum_Can_1.jpg"
-
+      url:"../../../assets/images/bag2.png"
     },
     { 
       features:[
@@ -51,12 +49,11 @@ export class HomeComponent implements OnInit {
       name:"Sally Fanny pack",
       code:"Y523201",
       description:"",
-      images:[{url:"https://identity-mag.com/wp-content/uploads/2017/07/cover.jpg"}],
+      images:[{url:"../../../assets/images/bag3.png"}],
       price:80432,
       categories:[],
       isHighlight:false,
-      url:"https://identity-mag.com/wp-content/uploads/2017/07/cover.jpg"
-
+      url:"../../../assets/images/bag3.png"
     },
     {
       features:[
@@ -67,12 +64,11 @@ export class HomeComponent implements OnInit {
       name:"Beauty Product",
       code:"Y523201",
       description:"",
-      images:[{url:"https://assets.entrepreneur.com/content/3x2/2000/1396394917-10-innovative-beauty-products-disrupt-morning-beauty-routine.jpg"}],
+      images:[{url:"../../../assets/images/bag4.png"}],
       price:90432,
       categories:[],
       isHighlight:false,
-      url:"https://assets.entrepreneur.com/content/3x2/2000/1396394917-10-innovative-beauty-products-disrupt-morning-beauty-routine.jpg"
-
+      url:"../../../assets/images/bag5.png"
     },
   ]
   constructor() { }

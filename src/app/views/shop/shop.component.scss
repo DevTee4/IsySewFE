@@ -1,26 +1,99 @@
 .bg-shop {
-    background-color: #f7fbfb;
+  background-color: #f7fbfb;
 }
 // .top-card {
 //     background: #f6f7fb;
 // }
 .space-grid {
-    .row {
-        margin: -0.5rem;
-    }
-    div[class^="col-"] {
-        padding: 0.5rem;
-        box-sizing: border-box;
-    }
+  .row {
+    margin: -0.5rem;
+  }
+  div[class^="col-"] {
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
 }
 
 .list-item-highlight {
-    // background: rgba(200, 229, 226, 0.4);
-    background: #c8e5e2 40%;
+  // background: rgba(200, 229, 226, 0.4);
+  background: #c8e5e2 40%;
+}
+.code-lbl {
+  color: #fbf8f8;
+}
+.name-lbl {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  align-items: center;
+  color: #fbf8f8;
 }
 .icon-image {
-    width: 22px;
-    height: 22px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: #ffffff;
+  padding: 7px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+.prod-card {
+  width: inherit;
+  height: 373px;
+  cursor: pointer;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.52) 100%
+  );
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 30px;
+}
+.top-card {
+  width: inherit;
+  height: 263px;
+  background: linear-gradient(
+    180.06deg,
+    rgba(0, 0, 0, 0) 71.36%,
+    rgba(0, 0, 0, 0.2) 96.98%
+  );
+}
+.bottom-card {
+  height: 110px;
+  background: #304387 !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  align-items: flex-end;
+}
+.ellipse {
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+  margin-right: 3px;
+}
+.view-txt {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.text-gray {
+  color: #938c8c;
+}
+.filters {
+    width: inherit !important;
+}
