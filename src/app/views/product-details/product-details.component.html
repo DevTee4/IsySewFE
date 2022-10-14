@@ -1,0 +1,33 @@
+
+        <div fxLayout="column" class="h-100" >
+            <div fxFlex="5" class="bg-orange">
+                 breadcrumb
+            </div>
+            <div class="bg-color" fxFlex="60">
+                <div fxLayout="row"  class="w-100 h-100 p-20">
+                    <div fxFlex fxLayout="row" fxLayoutAlign="space-between">
+                        <div class="y-scroll x-scroll-none p-10 " fxFlex="20" fxLayoutAlign="start center" fxLayout="column">
+                            <ng-template ngFor let-img [ngForOf]="product?.images">
+                                    <img  class="img-fluid icon-image thumb-img" [src]="img.url" />
+                            </ng-template>
+                        </div>
+                        <div fxFlex="80" fxLayout="row" fxLayoutAlign="center center">
+                            <img fxFlex="5"  class="navigation-img" src="../../../assets/images/left-arrow.png" />
+                            <img fxFlex="100" class="img-fluid icon-image large-img pt-0 br-0 mt-0" [src]="currentImgUrl" />
+                            <img fxFlex="5" fxLayout  fxLayoutAlign="end end" class="navigation-img " src="../../../assets/images/right-arrow.png" />
+                        </div>
+                    </div>
+
+                    <div fxFlex>
+
+                    </div>
+
+                </div>
+            </div>
+            <div fxFlex="25">
+                product details
+            </div>
+            <div fxFlex="35">
+                you might like this
+            </div>
+        </div>

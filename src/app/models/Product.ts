@@ -18,4 +18,5 @@ export class Product extends BaseEntity {
   //add to the backend
   features: ProductFeatures[] = [];
   isHighlight=false;
+  url=""
 }

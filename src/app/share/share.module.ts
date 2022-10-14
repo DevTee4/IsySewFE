@@ -5,6 +5,8 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NbActionsModule, NbButtonModule, NbCardModule, NbCheckboxModule, NbDialogModule, NbIconLibraries, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbMenuModule, NbRadioModule, NbSearchModule, NbSelectModule, NbStatusService, NbTabsetModule, NbThemeModule, NbUserModule } from "@nebular/theme";
 import { ToastModule } from "./toast-notification";
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [ ],
   imports: [
@@ -23,6 +25,7 @@ import { ToastModule } from "./toast-notification";
    
   ],
   exports: [
+    FlexLayoutModule,
      ReactiveFormsModule,
      FormsModule,
      NbMenuModule,
