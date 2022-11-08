@@ -22,3 +22,12 @@
     position: absolute;
     top: 50%;
   }
+  .card-save-for-later{
+    border-radius: 10px;
+    background-color: white;
+    height: fit-content;
+  }
+  .card-save-for-later >img {
+      width: 20px;
+      height: 20px;
+  }

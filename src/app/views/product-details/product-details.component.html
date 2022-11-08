@@ -1,5 +1,5 @@
 
-        <div fxLayout="column" class="h-100" >
+        <div fxLayout="column" class="hv-100" >
             <div fxFlex="5" class="bg-orange">
                  breadcrumb
             </div>
@@ -18,16 +18,78 @@
                         </div>
                     </div>
 
-                    <div fxFlex>
+                    <div fxFlex fxLayout="column" >
+                        <!-- Product name -->
+                        <h2 class="small-text" fxFlex="15">{{product.name}}</h2>
+                        <!-- Rating -->
+                        <!-- Price -->
+                        <div fxFlex="10" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+                            <h4>{{product.price}}</h4>
+                            <span class="fw-400">{{product.specialPrice}}</span>
+                        </div>
+                        <!-- Button -->
+                        <div fxFlex="20"  fxLayoutGap="30px" fxLayout fxLayoutAlign="start center">
+                            <button shape="round" size="medium" class="color-white bg-orange" nbButton>ADD TO CART</button>
+                            <div class="card-save-for-later p-10">
+                              <img  src="../../../assets/images/save_for_later.png" />
+                            </div>
+                            <span class="small-text fw-900">SAVE FOR LATER</span>
+                        </div>
 
+                        <div fxFlex="55" fxLayout fxLayoutAlign="start end" fxLayoutGap="10px">
+                            <span class="large-text">Share</span>
+                           <img src="../../../assets/images/fb_share.png" />
+                           <img src="../../../assets/images/instagram_share.png" />
+                           <img src="../../../assets/images/twiter_share.png" />
+                        </div>
+                       
                     </div>
 
                 </div>
             </div>
-            <div fxFlex="25">
-                product details
+            <div fxFlex fxLayout class="bg-white" fxLayoutGap="20px" fxLayoutAlign="center center" >
+               <div fxFlex fxLayout="column" class="pl-10"> 
+                <span class="underline">Product Details</span>
+                {{product.description}}
+               </div>
+          
+            <div fxFlex fxLayout="column">
+                <span class="underline">Product Code</span>
+                {{product.code}}
+
+                <span class="underline">Look After Me</span>
+                {{product.summary}}
             </div>
-            <div fxFlex="35">
-                you might like this
+            </div>
+            <div fxFlex="35" fxLayout="row">
+            <ng-template ngFor let-item [ngForOf]="product.similarProducts">
+                <div fxFlex class="col-3">
+                    <div class="card prod-card" [class.list-item-highlight]="item.isHighlight" (mouseout)="item.isHighlight=false"
+                        (mouseover)="item.isHighlight=true">
+                        <!-- top -->
+                        <div class="top-card">
+                            <div style="position: absolute; width: inherit;"
+                                [style.visibility]="item.isHighlight?'visible':'hidden'" class="row d-flex">
+                                <img class="img-fluid icon-image mr-auto" src="../../../assets/images/heart.png" />
+                                <div class="d-flex-col">
+                                    <img class="img-fluid icon-image" src="../../../assets/images/cart.png" />
+                                    <ng-template ngFor let-items [ngForOf]="item?.features">
+                                        <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <img class="my-auto img-fluid row" [src]="item.images[0].url" />
+                        </div>
+                        <!-- bottom -->
+                        <div class="bottom-card">
+                            <h4 [class.text-highlight]="item.isHighlight" class="small-text" >{{item.name}}</h4>
+                            <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
+                                {{item.code}}</p>
+                            <p [class.text-highlight]="item.isHighlight" class="small text-center px-3  code-lbl">
+                                {{item.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
             </div>
         </div>

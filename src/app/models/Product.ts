@@ -17,6 +17,7 @@ export class Product extends BaseEntity {
   reviewCount = 0
   //add to the backend
   features: ProductFeatures[] = [];
+  similarProducts:Product[]=[]
   isHighlight=false;
   url=""
 }
