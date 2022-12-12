@@ -1,10 +1,10 @@
 
-        <div fxLayout="column" class="hv-100" >
+        <div fxLayout="column" class="h-100">
             <div fxFlex="5" class="bg-orange">
                  breadcrumb
             </div>
-            <div class="bg-color" fxFlex="60">
-                <div fxLayout="row"  class="w-100 h-100 p-20">
+            <div class="bg-color" fxFlex="50">
+                <div fxLayout="row"  class="p-20">
                     <div fxFlex fxLayout="row" fxLayoutAlign="space-between">
                         <div class="y-scroll x-scroll-none p-10 " fxFlex="20" fxLayoutAlign="start center" fxLayout="column">
                             <ng-template ngFor let-img [ngForOf]="product?.images">
@@ -47,7 +47,7 @@
 
                 </div>
             </div>
-            <div fxFlex fxLayout class="bg-white" fxLayoutGap="20px" fxLayoutAlign="center center" >
+            <div fxFlex="20" fxLayout class="bg-white" fxLayoutGap="20px" fxLayoutAlign="center center" >
                <div fxFlex fxLayout="column" class="pl-10"> 
                 <span class="underline">Product Details</span>
                 {{product.description}}
@@ -61,35 +61,39 @@
                 {{product.summary}}
             </div>
             </div>
-            <div fxFlex="35" fxLayout="row">
-            <ng-template ngFor let-item [ngForOf]="product.similarProducts">
-                <div fxFlex class="col-3">
-                    <div class="card prod-card" [class.list-item-highlight]="item.isHighlight" (mouseout)="item.isHighlight=false"
-                        (mouseover)="item.isHighlight=true">
-                        <!-- top -->
-                        <div class="top-card">
-                            <div style="position: absolute; width: inherit;"
-                                [style.visibility]="item.isHighlight?'visible':'hidden'" class="row d-flex">
-                                <img class="img-fluid icon-image mr-auto" src="../../../assets/images/heart.png" />
-                                <div class="d-flex-col">
-                                    <img class="img-fluid icon-image" src="../../../assets/images/cart.png" />
-                                    <ng-template ngFor let-items [ngForOf]="item?.features">
-                                        <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
-                                    </ng-template>
+            <div fxFlex="30" fxLayout="column" class="p-20">
+                <span fxFlex class="p-0 mb-10 fw-600">YOU MIGHT ALSO LIKE</span>
+                <div fxFlex="grow" fxLayout="row" >
+                <ng-template ngFor let-item [ngForOf]="product.similarProducts">
+                    <div  class="col-3">
+                        <div class="card prod-card" [class.list-item-highlight]="item.isHighlight" (mouseout)="item.isHighlight=false"
+                            (mouseover)="item.isHighlight=true">
+                            <!-- top -->
+                            <div class="top-card">
+                                <div style="position: absolute; width: inherit;"
+                                    [style.visibility]="item.isHighlight?'visible':'hidden'" class="row d-flex">
+                                    <img class="img-fluid icon-image mr-auto" src="../../../assets/images/heart.png" />
+                                    <div class="d-flex-col">
+                                        <img class="img-fluid icon-image" src="../../../assets/images/cart.png" />
+                                        <ng-template ngFor let-items [ngForOf]="item?.features">
+                                            <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
+                                        </ng-template>
+                                    </div>
                                 </div>
+                                <img class="my-auto img-fluid row" [src]="item.images[0].url" />
                             </div>
-                            <img class="my-auto img-fluid row" [src]="item.images[0].url" />
-                        </div>
-                        <!-- bottom -->
-                        <div class="bottom-card">
-                            <h4 [class.text-highlight]="item.isHighlight" class="small-text" >{{item.name}}</h4>
-                            <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
-                                {{item.code}}</p>
-                            <p [class.text-highlight]="item.isHighlight" class="small text-center px-3  code-lbl">
-                                {{item.price}}</p>
+                            <!-- bottom -->
+                            <div class="bottom-card">
+                                <h4 [class.text-highlight]="item.isHighlight" class="small-text" >{{item.name}}</h4>
+                                <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
+                                    {{item.code}}</p>
+                                <p [class.text-highlight]="item.isHighlight" class="small text-center px-3  code-lbl">
+                                    {{item.price}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </ng-template>
+                </ng-template>
+            </div> 
             </div>
+          
         </div>

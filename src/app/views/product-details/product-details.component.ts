@@ -44,7 +44,7 @@ export class ProductDetailsComponent implements OnInit {
       isHighlight:false,
       url:'../../../assets/images/bag3.png',
       similarProducts:[
-{ 
+    { 
         reviewCount:50,
         _id:"uuuu",
          createdAt:new Date(),

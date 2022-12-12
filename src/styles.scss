@@ -72,6 +72,9 @@ box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }.h-98{
   height: 98%!important;
 }
+.pb-10 {
+  padding-bottom: 10px;
+}
 .pl-10{
   padding-left: 10px;
 }
@@ -91,6 +94,12 @@ box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 .p-50{
   padding: 50px!important;
 }
+.p-0{
+  padding: 0px;
+}
+.m-0{
+  margin: 0px;
+}
 .w20-h20{
  width: 20px !important;
  height: 20px!important;
@@ -107,6 +116,12 @@ box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
 }
+.x-scroll-auto {
+  overflow-x: auto;
+}
+.y-scroll-auto{
+    overflow-y: auto;
+}
 .y-scroll{
   overflow-y: scroll;
 }
@@ -118,6 +133,9 @@ box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
 .m-10{
   margin: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
 }
 .bg-color {
   background-color: #fff8dd !important;
