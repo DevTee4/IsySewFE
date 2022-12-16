@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/Product';
+import { Image } from 'src/app/models/Image';
+
 import { ProductType } from 'src/app/models/ProductType';
 
 @Component({
@@ -13,7 +15,19 @@ export class ProductDetailsComponent implements OnInit {
   constructor() { 
 
   }
-  
+  changeCurrentImage(img:Image){
+    this.currentImgUrl=img.url;
+  }
+  switchCurrentImage(next:boolean){
+    if(next){
+      const index=this.product.images.findIndex(f=>f.url= this.currentImgUrl);
+      this.currentImgUrl= index<this.product.images.length-1?this.product.images[index+1].url:this.product.images[index].url;
+    }
+    else{
+      const index=this.product.images.findIndex(f=>f.url= this.currentImgUrl);
+      this.currentImgUrl= index>0?this.product.images[index-1].url:this.product.images[index].url;
+    }
+  }
   ngOnInit(): void {
       this.product= { 
         reviewCount:50,
@@ -22,7 +36,7 @@ export class ProductDetailsComponent implements OnInit {
           updatedAt:new Date(),
       summary:"",
       specialPrice:800,
-      rating:3.0,
+      rating:2.0,
       productType:ProductType.Digital,
       features:[
       {description:"All frames constructed with hardwood solids and laminates",colorCode:"#F52B70",_id:"8999",createdAt:new Date(),updatedAt:new Date()},
@@ -31,13 +45,13 @@ export class ProductDetailsComponent implements OnInit {
       ] , 
       name:"Sally Fanny pack",
       code:"Y523201",
-      description:"All frames constructed with hardwood solids and laminates",
+      description:"All frames constructed with hardwood solids ",
       images:[
         {url:"../../../assets/images/bag3.png",position:1,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
-        {url:"../../../assets/images/bag3.png",position:2,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
-        {url:"../../../assets/images/bag3.png",position:5,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
-        {url:"../../../assets/images/bag3.png",position:4,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
-        {url:"../../../assets/images/bag3.png",position:3,_id:"8999",createdAt:new Date(),updatedAt:new Date()}
+        {url:"../../../assets/images/bag2.png",position:2,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
+        {url:"../../../assets/images/bag1.png",position:5,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
+        {url:"../../../assets/images/bag4.png",position:4,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
+        {url:"../../../assets/images/bag5.png",position:3,_id:"8999",createdAt:new Date(),updatedAt:new Date()}
       ],
       price:80432,
       categories:[],
@@ -62,7 +76,7 @@ export class ProductDetailsComponent implements OnInit {
       code:"Y523201",
       description:"All frames constructed with hardwood solids and laminates",
       images:[
-        {url:"../../../assets/images/bag3.png",position:1,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
+        {url:"../../../assets/images/bag2.png",position:1,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
         {url:"../../../assets/images/bag3.png",position:2,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
         {url:"../../../assets/images/bag3.png",position:5,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
         {url:"../../../assets/images/bag3.png",position:4,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
@@ -94,7 +108,7 @@ export class ProductDetailsComponent implements OnInit {
       code:"Y523201",
       description:"All frames constructed with hardwood solids and laminates",
       images:[
-        {url:"../../../assets/images/bag3.png",position:1,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
+        {url:"../../../assets/images/bag1.png",position:1,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
         {url:"../../../assets/images/bag3.png",position:2,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
         {url:"../../../assets/images/bag3.png",position:5,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
         {url:"../../../assets/images/bag3.png",position:4,_id:"8999",createdAt:new Date(),updatedAt:new Date()},
@@ -143,6 +157,9 @@ export class ProductDetailsComponent implements OnInit {
       ]
     };
     this.currentImgUrl=this.product.images[0].url;
+  }
+  productOnclick(product:Product){
+    console.log(product)
   }
   
 }

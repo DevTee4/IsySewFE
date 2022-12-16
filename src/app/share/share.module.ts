@@ -6,7 +6,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NbActionsModule, NbButtonModule, NbCardModule, NbCheckboxModule, NbDialogModule, NbIconLibraries, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbMenuModule, NbRadioModule, NbSearchModule, NbSelectModule, NbStatusService, NbTabsetModule, NbThemeModule, NbUserModule } from "@nebular/theme";
 import { ToastModule } from "./toast-notification";
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import {DropdownModule} from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 @NgModule({
   declarations: [ ],
   imports: [
@@ -22,6 +24,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
       closeOnBackdropClick:false,
       autoFocus:false
     }),
+    NbButtonModule
    
   ],
   exports: [
@@ -45,6 +48,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
      NbDialogModule,
      NbInputModule,
      ToastModule,
+
+
+    ButtonModule,
+    RippleModule,
+     DropdownModule
   ],
   providers: [
     // MatDatepickerModule,

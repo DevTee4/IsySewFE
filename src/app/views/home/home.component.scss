@@ -1,6 +1,6 @@
 .topPix {
   background: #c8e5e2;
-  border-radius: 50px;
+  // border-radius: 50px;
   background: linear-gradient(180deg, #f38b50 0%, #fdfff5 100%);
   margin-left: 70px;
   margin-right: 70px;
@@ -11,7 +11,7 @@
     0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 50px;
   margin: 30px;
-  margin-bottom: -80px !important;
+  // margin-bottom: -80px !important;
   width: 100%;
 }
 .top-text {
@@ -20,8 +20,8 @@
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
-  line-height: 49px;
-  letter-spacing: 0.02em;
+  // line-height: 49px;
+  // letter-spacing: 0.02em;
 }
 .code-lbl {
   color: rgba(33, 36, 61, 0.9);
@@ -47,38 +47,8 @@
   margin-top: 15px;
   margin-right: 3px;
 }
-.prod-card {
-  width: inherit;
-  height: 373px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.52) 100%
-  );
-  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
-    0px 0px 1px rgba(0, 0, 0, 0.04);
-  border-radius: 30px;
-}
-.top-card {
-  width: inherit;
-  height: 263px;
-  background: linear-gradient(
-    180.06deg,
-    rgba(0, 0, 0, 0) 71.36%,
-    rgba(0, 0, 0, 0.2) 96.98%
-  );
-}
-.bottom-card {
-  height: 110px;
-  background: #f2fdee !important;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
+
+
 .carousel {
   height: auto !important;
   width: 100% !important;
@@ -105,7 +75,7 @@
   background-color: #fff8dd !important;
 }
 .bg-frame {
-  height: 100% !important;
+  // height: 100% !important;
   background: linear-gradient(
     180.06deg,
     rgba(0, 0, 0, 0) 71.36%,
@@ -114,12 +84,12 @@
   background-image: url("../../../assets/images/bg-img.png");
 
   border-radius: 30px 30px 0px 0px;
-  height: 250px;
+  // height: 250px;
   width: inherit;
   padding: 0px;
 }
 .bg-prod {
-  margin-top: 100px;
+  // margin-top: 100px;
   background: #57c9a0;
   border-radius: 30px;
   padding-top: 20px;

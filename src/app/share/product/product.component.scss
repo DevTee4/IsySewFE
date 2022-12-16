@@ -1,0 +1,28 @@
+.prod-card {
+    width: inherit;
+    // height: 250px;
+    background: radial-gradient(50% 50% at 50% 50%,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.52) 100%);
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+        0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+}
+.top-card {
+    width: inherit;
+    // height: 263px;
+    background: linear-gradient(180.06deg,
+            rgba(0, 0, 0, 0) 71.36%,
+            rgba(0, 0, 0, 0.2) 96.98%);
+}
+.bottom-card {
+    // height: 110px;
+    // background: #f2fdee !important;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

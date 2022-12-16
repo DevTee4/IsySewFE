@@ -4,6 +4,7 @@ import { ShopComponent } from './shop.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NbLayoutModule, NbSearchModule, NbSidebarModule } from '@nebular/theme';
 import { SharedModule } from 'src/app/share/share.module';
+import { ProductModule } from 'src/app/share/product/product.module';
 
 export const appRoutes: Routes = [
   { path: "", component: ShopComponent },
@@ -14,7 +15,8 @@ export const appRoutes: Routes = [
   imports: [
     NbSidebarModule,
     SharedModule,
-  RouterModule.forChild(appRoutes), CommonModule
+  RouterModule.forChild(appRoutes), CommonModule,
+  ProductModule
   ],
   exports: []
 })

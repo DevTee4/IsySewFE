@@ -135,5 +135,10 @@ export class ShopComponent implements OnInit {
   showProductDetails() {
     this.router.navigate(['/product-details']);
   }
+ productOnclick(product:Product){
+    console.log(product)
+    this.router.navigate(['/product-details']);
 
+  }
+  
 }

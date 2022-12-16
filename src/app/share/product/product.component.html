@@ -1,0 +1,28 @@
+    <div (click)="productOnclick()" class="card prod-card cursor-pointer" [class.list-item-highlight]="item.isHighlight" (mouseout)="item.isHighlight=false"
+        (mouseover)="item.isHighlight=true">
+        <!-- top -->
+        <div class="top-card relative ">
+            <img class="img-fluid icon-image top-5 left-5 absolute" src="../../../assets/images/cart.png" />
+            <img class="img-fluid icon-image top-5 right-5 absolute" src="../../../assets/images/heart.png" />
+            <img class="my-auto img-fluid row w-full" [src]="item.images?item.images[0].url:[]" />
+            <div class="absolute bottom-0 text-center left-0 bg-deep-blue w-4 py-1 text-white">
+                10% Off
+            </div>
+            <!-- Rating -->
+            <star-rating class="justify-content-end flex absolute right-0 bottom-0" [starType]="'svg'"
+                [rating]="item?.rating"></star-rating>
+        </div>
+        <!-- bottom -->
+        <div class="bottom-card bg-blue">
+            <h4 [class.text-highlight]="item.isHighlight" class="small-text text-white">{{item.name}}</h4>
+            <!-- <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center  text-white code-lbl">Code -
+                                    {{item.code}}</p> -->
+            <div fxLayout>
+                <div [class.text-highlight]="item.isHighlight" class=" text-center px-3 text-white code-lbl">
+                    N{{item.price}}</div>
+                <div [class.text-highlight]="item.isHighlight" class="small text-center px-3 text-grey">
+                    N<del>{{item.specialPrice}}></del></div>
+            </div>
+
+        </div>
+    </div>
