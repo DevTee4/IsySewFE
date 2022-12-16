@@ -11,27 +11,27 @@
                 <img class="img-fluid col-5 bg-frame" src="../../../assets/images/frame.png" />
             </div>
         </div>
-        <!-- <div fxFlex="grow" fxLayout="column">
+        <div fxFlex="grow" fxLayout="column" class="bg-green-500 p-3">
             <div class="text-ft">Featured Products </div>
             <div fxLayoutAlign="center" fxLayout="row wrap" fxLayoutGap="12px">
                 <ng-template ngFor let-item [ngForOf]="products">
-                    <app-product class="mt-3" fxFlex="23" [product]="products"></app-product>
+                    <app-product class="mt-3" fxFlex="23" [product]="item"></app-product>
                 </ng-template>
             </div>
 
-        </div> -->
+        </div>
         <div  fxLayout class="  w-75 mt-5 mx-auto">
-            <slideshow  [showArrows]=false [disableSwiping]="true" [autoPlay]=true [showDots]=true
+            <slideshow style="background-color: #E5E5E5"  [showArrows]=false [disableSwiping]="true" [autoPlay]=true [showDots]=true
                 (onIndexChanged)="slide($event)" class="col-5 p-4" [imageUrls]="products"></slideshow>
             <div fxLayout="column" class="col-6 ">
-                <h5 class="w-100 font-weight-bolder">Unique Features Of latest & Trending Products</h5>
+                <h3 class="w-100 font-weight-bolder">Unique Features Of latest & Trending Products</h3>
                 <ng-template ngFor let-item [ngForOf]="selectedProduct?.features">
-                    <div class="row  mb-3">
+                    <div fxLayout class="row  mb-3">
                         <span [style.background]="item.colorCode" class="my-auto rounded-circle w-10-h-10 mr-3"></span>
                         <span class="text-black col ">{{item.description}}</span>
                     </div>
                 </ng-template>
-                    <p class="text-black m-0">{{selectedProduct?.name}}</p>
+                    <div class="text-black m-0">{{selectedProduct?.name}}</div>
                 <div fxLayout fxLayoutGap="10px" class="mt-2">
              
 <button fxFlex="none" pButton routerLink="/home" pRipple type="button" label="ADD TO CART"
