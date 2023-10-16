@@ -7,9 +7,8 @@ import { NbActionsModule, NbButtonModule, NbIconModule } from "@nebular/theme";
 // import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
-  imports: [OverlayModule,NbIconModule,NbActionsModule,NbButtonModule, CommonModule],
-  declarations: [ToastComponent],
-  entryComponents: [ToastComponent]
+    imports: [OverlayModule, NbIconModule, NbActionsModule, NbButtonModule, CommonModule],
+    declarations: [ToastComponent]
 })
 export class ToastModule {
   public static forRoot(config = defaultToastConfig): ModuleWithProviders<ToastModule> {
