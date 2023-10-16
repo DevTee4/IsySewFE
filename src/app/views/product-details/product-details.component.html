@@ -1,0 +1,74 @@
+
+        <div fxLayout="column" class="h-screen ">
+      
+            <div class="bg-color px-7 py-5" fxFlex="grow">
+                <div fxLayout="row"  class="p-20">
+                    <div fxFlex fxLayout="row" fxLayoutAlign="space-between">
+                        <div class="y-scroll x-scroll-none p-10 " fxFlex="20" fxLayoutAlign="start center" fxLayout="column">
+                            <ng-template ngFor let-img [ngForOf]="product?.images">
+                                    <img [ngClass]="img.url===currentImgUrl ? 'orange-border' : 'border-none'" (click)="changeCurrentImage(img)"  class="img-fluid icon-image thumb-img bg-grey cursor-pointer" [src]="img.url" />
+                            </ng-template>
+                        </div>
+                        <div fxFlex="80" fxLayout="row" fxLayoutAlign="center center" class="bg-grey mx-4 relative">
+                            <!-- <img fxFlex="5" (click)="switchCurrentImage(false)"  class="absolute top-50 left-5 cursor-pointer" src="../../../assets/images/left-arrow.png" /> -->
+                            <img fxFlex="100" class="image-cover" [src]="currentImgUrl" />
+                            <!-- <img fxFlex="5" (click)="switchCurrentImage(true)" fxLayout   class="absolute top-50 right-5 cursor-pointer" src="../../../assets/images/right-arrow.png" /> -->
+                        </div>
+                    </div>
+
+                    <div fxFlex fxLayout="column" >
+                        <!-- Product name -->
+                        <div class="large-text product-name fw-600" fxFlex="15">{{product.name}}</div>
+                        <!-- Rating -->
+                        <star-rating class="justify-content-start flex" [starType]="'svg'" [rating]="product.rating"></star-rating>
+                        <!-- Price -->
+                        <div fxFlex="10" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+                            <div class="price-text">N{{product.price}}</div>
+                            <div class="fw-400 text-grey">N<del>{{product.specialPrice}}</del></div>
+                        </div>
+                        <!-- Button -->
+                        <div fxFlex="20"  fxLayoutGap="30px" fxLayout fxLayoutAlign="start center">
+                                    <button fxFlex="none" pButton routerLink="/home" pRipple type="button" label="ADD TO CART"
+                                        class="p-button-rounded p-button-warning p-button-sm p-3 text-white bg-orange btn-addtocart">
+                            </button>
+                            <div class="card-save-for-later p-10">
+                              <img  src="../../../assets/images/save_for_later.png" />
+                            </div>
+                            <span class="small-text fw-900">SAVE FOR LATER</span>
+                        </div>
+
+                        <div fxFlex="55" fxLayout fxLayoutAlign="start end" fxLayoutGap="10px">
+                            <span class="large-text">Share</span>
+                           <img src="../../../assets/images/fb_share.png" />
+                           <img src="../../../assets/images/instagram_share.png" />
+                           <img src="../../../assets/images/twiter_share.png" />
+                        </div>
+                       
+                    </div>
+
+                </div>
+            </div>
+            <div  fxLayout class="bg-white p-2 mt-3" fxLayoutGap="20px" fxLayoutAlign="center start" >
+               <div fxFlex fxLayout="column" class="px-5 py-3" > 
+                <span class="underline fw-500">Product Details</span>
+                <span class="small-text">{{product.description}}</span>
+               </div>
+          
+            <div fxFlex fxLayout="column">
+                <span class="underline fw-500">Product Code</span>
+                <span class="small-text">{{product.code}}</span>
+
+                <span class="underline fw-500">Look After Me</span>
+                <span class="small-text">{{product.summary}}</span>
+            </div>
+            </div>
+            <div  fxLayout="column" class="pt-3 px-7 py-5">
+                <span fxFlex class="p-0 mb-3 fw-600">YOU MIGHT ALSO LIKE</span>
+                <div fxFlex="grow" fxLayout="row" fxLayoutGap="10px" >
+                <ng-template ngFor let-item [ngForOf]="product.similarProducts">
+                            <app-product (productOnclick)="productOnclick($event)" fxFlex="25" [product]="item"></app-product>
+
+                </ng-template>
+            </div> 
+            </div>
+        </div>

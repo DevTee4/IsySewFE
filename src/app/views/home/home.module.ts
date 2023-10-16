@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/share/share.module';
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { ProductModule } from 'src/app/share/product/product.module';
+import { StarRatingModule } from 'angular-star-rating';
 
 
 
@@ -17,7 +19,10 @@ export const appRoutes: Routes = [
   RouterModule.forChild(appRoutes), 
   CommonModule,
   SharedModule,
-  SlideshowModule
+  SlideshowModule,
+  ProductModule,
+           StarRatingModule.forRoot(),
+
   ],
   exports: [],
 })

@@ -25,10 +25,15 @@
   // }
 
   /* Add a black background color to the top navigation */
+  .mt-4{
+    margin-top: 4px;
+  }
   .topnav {
     overflow: hidden;
   }
-
+  .top-height{
+    height: 60px;
+  }
   /* Style the links inside the navigation bar */
   .topnav a {
     text-align: center;
@@ -36,7 +41,10 @@
     text-decoration: none;
     font-size: 17px;
   }
-
+.body-section{
+  // max-height: 100vh!important;
+  // padding-bottom: 20px;
+}
   /* Change the color of links on hover */
   .topnav a:hover {
     // background-color: #ddd;
@@ -61,6 +69,7 @@
     // background-position-x: right;
     // background-position-x: bottom;
     background-size: cover;
+    background-color: blue;
     // background-position: right 0px bottom -10px;
     background-repeat: no-repeat;
     padding: 2rem !important;
@@ -69,17 +78,12 @@
     width: 35px !important;
     height: 35px !important;
   }
-  .bg-color {
-    background-color: #fff8dd !important;
-  }
-  .bg-orange {
-    background-color: #F38B50 !important;
-  }
+  
   .pad-0 {
     padding: none !important;
   }
   .topNavMenu {
-    height: 80px;
+    // height: 80px;
     object-fit: scale-down;
   }
 }

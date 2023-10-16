@@ -57,7 +57,7 @@
         </div>
     </div>
     <!-- view section -->
-    <div class="row mb-3">
+    <div fxLayout class=" mb-3">
         <!-- paging -->
         <span class="ml-2 text-gray view-txt">Showing 1-8 of 51 results</span>
         <!-- view -->
@@ -70,37 +70,9 @@
         </div>
     </div>
     <!-- products -->
-    <div class="row space-grid">
+    <div fxLayoutAlign="center" fxLayout="row wrap" fxLayoutGap="12px" class="">
         <ng-template ngFor let-item [ngForOf]="products">
-            <div class="col-3">
-                <div (click)="showProductDetails()" class="card prod-card" [class.list-item-highlight]="item.isHighlight"
-                    (mouseout)="item.isHighlight=false" (mouseover)="item.isHighlight=true">
-                    <!-- top -->
-                    <div class="top-card">
-                        <div style="position: absolute; width: inherit;"
-                            [style.visibility]="item.isHighlight?'visible':'hidden'" class="row d-flex">
-                            <img class="img-fluid icon-image mr-auto" src="../../../assets/images/heart.png" />
-                            <div class="d-flex-col">
-                                <img class="img-fluid icon-image" src="../../../assets/images/cart.png" />
-                                <ng-template ngFor let-items [ngForOf]="item?.features" let-i="index">
-                                    <span [style.background]="items.colorCode" class="ellipse rounded-circle"></span>
-                                </ng-template>
-                            </div>
-                        </div>
-                        <img class="my-auto img-fluid row" [src]="item.images[0].url" />
-                        <!-- <button nbButton [style.visibility]="item.isHighlight?'visible':'hidden'"
-                            class="my-3 mx-auto small d-block p-2 text-black bg-danger">View Details</button> -->
-                    </div>
-                    <!-- bottom -->
-                    <div class="bottom-card">
-                        <h4 [class.text-highlight]="item.isHighlight" class="name-lbl">{{item.name}}</h4>
-                        <p [class.text-highlight]="item.isHighlight" class="px-3 small text-center code-lbl">Code -
-                            {{item.code}}</p>
-                        <p [class.text-highlight]="item.isHighlight" class="small text-center px-3  code-lbl">
-                            {{item.price}}</p>
-                    </div>
-                </div>
-            </div>
+            <app-product (productOnclick)="productOnclick($event)" class="mt-3" fxFlex="23" [product]="item"></app-product>
         </ng-template>
     </div>
 

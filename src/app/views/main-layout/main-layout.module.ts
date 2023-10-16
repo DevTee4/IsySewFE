@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/home.component';
 import { SharedModule } from 'src/app/share/share.module';
 import {NbSidebarModule} from '@nebular/theme';
 import { BrowserTransferStateModule, platformBrowser } from '@angular/platform-browser';
+import { StarRatingModule } from 'angular-star-rating';
 
 export const appRoutes: Routes = [
   {
@@ -86,7 +87,9 @@ export const appRoutes: Routes = [
     RouterModule.forChild(appRoutes),
     BrowserTransferStateModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+             StarRatingModule.forRoot(),
+
   ],
   exports: [],
 })

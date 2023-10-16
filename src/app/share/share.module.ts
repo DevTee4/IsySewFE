@@ -5,6 +5,10 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NbActionsModule, NbButtonModule, NbCardModule, NbCheckboxModule, NbDialogModule, NbIconLibraries, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbMenuModule, NbRadioModule, NbSearchModule, NbSelectModule, NbStatusService, NbTabsetModule, NbThemeModule, NbUserModule } from "@nebular/theme";
 import { ToastModule } from "./toast-notification";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {DropdownModule} from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 @NgModule({
   declarations: [ ],
   imports: [
@@ -20,9 +24,11 @@ import { ToastModule } from "./toast-notification";
       closeOnBackdropClick:false,
       autoFocus:false
     }),
+    NbButtonModule
    
   ],
   exports: [
+    FlexLayoutModule,
      ReactiveFormsModule,
      FormsModule,
      NbMenuModule,
@@ -42,6 +48,11 @@ import { ToastModule } from "./toast-notification";
      NbDialogModule,
      NbInputModule,
      ToastModule,
+
+
+    ButtonModule,
+    RippleModule,
+     DropdownModule
   ],
   providers: [
     // MatDatepickerModule,
