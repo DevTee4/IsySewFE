@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-account',
@@ -8,14 +8,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CreateAccountComponent implements OnInit {
 
-  createAccountForm: FormGroup;
+  createAccountForm: UntypedFormGroup;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.createAccountForm = new FormGroup({
-      Username: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
+    this.createAccountForm = new UntypedFormGroup({
+      Username: new UntypedFormControl('', Validators.required),
+      email: new UntypedFormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
     });
   }
   get f() { 
